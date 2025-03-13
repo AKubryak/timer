@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(90deg, #95be9c, #c6ddbe);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #95be9c, #c6ddbe);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,17 +9,61 @@ body {
     height: 100vh;
 }
 .timer-container {
-
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding:30px;
+    border-radius: 12px;
+    width: 300px;
+    max-width: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 #display {
-
+    color: #333;
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 button {
-
+    padding: 12px 22px;
+    background-color: #31a749;
+    color: #fff;
+    font-size: 1em;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 button:hover {
-
+    background: #0d7a1f;
+    transform: scale(1.05);
 }
 button:active {
-    
+    box-shadow: inset 0px 0px 10px #03430e;
+    background-color: #044a19;
+    transform: scale(0.95);
+}
+#start::before {
+    content: '▶';
+    margin-right: 6px;
+}
+#stop::before {
+    content: '⏹';
+    margin-right: 6px;
+}
+
+@media (max-width: 600px) {
+    .timer-container {
+        width: 80%;
+        padding: 20px;
+    }
+    #display {
+        font-size: 2.5em;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
 }
